@@ -330,7 +330,7 @@ IMPEG2D_ERROR_CODES_T impeg2d_vld_inv_quant_mpeg1(
         PROFILE_DISABLE_MEMSET_RESBUF_IF0
         if (1 != (ps_dec->u4_non_zero_cols | ps_dec->u4_non_zero_rows))
         {
-            ps_dec->pf_memset_16bit_8x8_linear_block (pi2_out_addr);
+            memset(pi2_out_addr, 0, 64 * sizeof(WORD16));
         }
 
         impeg2d_inv_quant_mpeg1(pi2_out_addr, pu1_weighting_matrix,
@@ -409,7 +409,7 @@ IMPEG2D_ERROR_CODES_T impeg2d_vld_inv_quant_mpeg2(
         PROFILE_DISABLE_MEMSET_RESBUF_IF0
         if (1 != (ps_dec->u4_non_zero_cols | ps_dec->u4_non_zero_rows))
         {
-            ps_dec->pf_memset_16bit_8x8_linear_block (pi2_out_addr);
+            memset(pi2_out_addr, 0, 64 * sizeof(WORD16));
         }
 
         i4_sum  = impeg2d_inv_quant_mpeg2(pi2_out_addr, pu1_weighting_matrix,

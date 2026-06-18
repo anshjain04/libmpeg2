@@ -21,21 +21,6 @@
 #ifndef IMPEG2_MEM_FUNC_H_
 #define IMPEG2_MEM_FUNC_H_
 
-typedef void pf_memset0_one_16bit_buf_t (WORD16 *buf);
-typedef void pf_memset_8bit_t (UWORD8 *dst, WORD32 dc_val, WORD32 dst_wd);
 
-pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block;
-pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_a9q;
-
-pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_sse42;
-
-pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_av8;
-
-pf_memset_8bit_t impeg2_memset_8bit_8x8_block;
-pf_memset_8bit_t impeg2_memset_8bit_8x8_block_a9q;
-
-pf_memset_8bit_t impeg2_memset_8bit_8x8_block_sse42;
-
-pf_memset_8bit_t impeg2_memset_8bit_8x8_block_av8;
 
 #endif /* IMPEG2_MEM_FUNC_H_ */

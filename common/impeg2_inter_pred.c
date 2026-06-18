@@ -82,7 +82,7 @@ void impeg2_copy_mb(yuv_buf_t *ps_src_buf,
 {
     UWORD8 *pu1_src;
     UWORD8 *pu1_dst;
-    UWORD32 i;
+    UWORD32 j;
     UWORD32 u4_rows = MB_SIZE;
     UWORD32 u4_cols = MB_SIZE;
 
@@ -91,7 +91,7 @@ void impeg2_copy_mb(yuv_buf_t *ps_src_buf,
     /*******************************************************/
     pu1_src = ps_src_buf->pu1_y;
     pu1_dst = ps_dst_buf->pu1_y;
-    for(i = 0; i < u4_rows; i++)
+    for(j = u4_rows; j > 0; j--)
     {
         memcpy(pu1_dst, pu1_src, u4_cols);
         pu1_src += u4_src_wd;
@@ -108,7 +108,7 @@ void impeg2_copy_mb(yuv_buf_t *ps_src_buf,
     /*******************************************************/
     pu1_src = ps_src_buf->pu1_u;
     pu1_dst = ps_dst_buf->pu1_u;
-    for(i = 0; i < u4_rows; i++)
+    for(j = u4_rows; j > 0; j--)
     {
         memcpy(pu1_dst, pu1_src, u4_cols);
 
@@ -120,7 +120,7 @@ void impeg2_copy_mb(yuv_buf_t *ps_src_buf,
     /*******************************************************/
     pu1_src = ps_src_buf->pu1_v;
     pu1_dst = ps_dst_buf->pu1_v;
-    for(i = 0; i < u4_rows; i++)
+    for(j = u4_rows; j > 0; j--)
     {
         memcpy(pu1_dst, pu1_src, u4_cols);
 

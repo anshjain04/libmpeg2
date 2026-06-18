@@ -92,10 +92,6 @@ void impeg2d_init_function_ptr_generic(void *pv_codec)
     ps_dec->pf_halfx_fully_8x8                 = &impeg2_mc_halfx_fully_8x8;
     ps_dec->pf_halfx_halfy_8x8                 = &impeg2_mc_halfx_halfy_8x8;
     ps_dec->pf_fullx_fully_8x8                 = &impeg2_mc_fullx_fully_8x8;
-
-    ps_dec->pf_memset_8bit_8x8_block           = &impeg2_memset_8bit_8x8_block;
-    ps_dec->pf_memset_16bit_8x8_linear_block   = &impeg2_memset0_16bit_8x8_linear_block;
-
     ps_dec->pf_copy_yuv420p_buf                = &impeg2_copy_frm_yuv420p;
     ps_dec->pf_fmt_conv_yuv420p_to_yuv422ile   = &impeg2_fmt_conv_yuv420p_to_yuv422ile;
     ps_dec->pf_fmt_conv_yuv420p_to_yuv420sp_uv = &impeg2_fmt_conv_yuv420p_to_yuv420sp_uv;

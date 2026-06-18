@@ -78,7 +78,4 @@ void impeg2d_init_function_ptr_sse42(void *pv_codec)
     dec->pf_halfx_fully_8x8                 = &impeg2_mc_halfx_fully_8x8_sse42;
     dec->pf_fullx_halfy_8x8                 = &impeg2_mc_fullx_halfy_8x8_sse42;
     dec->pf_fullx_fully_8x8                 = &impeg2_mc_fullx_fully_8x8_sse42;
-
-    dec->pf_memset_8bit_8x8_block           = &impeg2_memset_8bit_8x8_block_sse42;
-    dec->pf_memset_16bit_8x8_linear_block   = &impeg2_memset0_16bit_8x8_linear_block_sse42;
 }
